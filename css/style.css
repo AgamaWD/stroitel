@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/*ШРИФТЫ*/
+@font-face {
+  font-family: "Mulish";
+  src: url("../fonts/Mulish/Mulish-Regular.woff2") format("woff2"), url("../fonts/Mulish/Mulish-Regular.woff") format("woff"), url("../fonts/Mulish/Mulish-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("../fonts/Mulish/Mulish-Medium.woff2") format("woff2"), url("../fonts/Mulish/Mulish-Medium.woff") format("woff"), url("../fonts/Mulish/Mulish-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("../fonts/Mulish/Mulish-SemiBold.woff2") format("woff2"), url("../fonts/Mulish/Mulish-SemiBold.woff") format("woff"), url("../fonts/Mulish/Mulish-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("../fonts/Mulish/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish/Mulish-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway/Raleway-Regular.woff") format("woff"), url("../fonts/Raleway/Raleway-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-SemiBold.woff2") format("woff2"), url("../fonts/Raleway/Raleway-SemiBold.woff") format("woff"), url("../fonts/Raleway/Raleway-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+/*СБРОС СТИЛЕЙ И СТАРТОВЫЕ НАСТРОЙКИ*/
+*, *::after, *::before, *:focus, *:active {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+/*ПЕРЕМЕННЫЕ*/
+/*МИКСИНЫ*/
+/*БЛОКИ И СЛУЖЕБНЫЕ КЛАССЫ*//*# sourceMappingURL=style.css.map */
