@@ -55,7 +55,7 @@
 html
     font-size: 16px
 
-body
+body, img
     width: 100%
     height: 100%
 
@@ -63,5 +63,146 @@ ul, ol
     list-style-type: none
 
 /*ПЕРЕМЕННЫЕ*/
+
+$text_color_dark: #656D89
+
+$text_color_light: #fff
+
+$title_color:#212D55
+
+$link_color:#31BEF4
+
+$title_font: 'Raleway', Arial, Helvetica, sans-serif 
+
+$text_font: 'Mulish', Arial, Helvetica, sans-serif
+
+$transition_delay: .5s
+
 /*МИКСИНЫ*/
 /*БЛОКИ И СЛУЖЕБНЫЕ КЛАССЫ*/
+
+.container
+    max-width: 1180px
+    margin: 0 auto
+    padding: 0 20px   
+
+.link
+    color: $title_color
+    text-decoration: none
+    transition: color $transition_delay
+    &--light
+        color: $text_color_light
+    &:hover
+        color: $link_color
+        transition: color $transition_delay
+
+.h1-title
+    font-family: $title_font
+    color: $title_color
+    font-size: 3.75rem
+    font-weight: 400
+    line-height: 1.2em
+
+.h2-title
+    font-family: $text_font
+    color: $title_color
+    font-size: 2.8rem
+    font-weight: 700
+    line-height: 1.6em
+
+.header
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    background: linear-gradient(180deg, rgba(248, 248, 248, 1) 0 70px, rgba(248, 248, 248, 0))
+    &__container
+        max-width: 1200px
+        margin: 0 auto
+        padding: 15px 20px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        column-gap: 54px
+
+.logo
+    width: 193px
+    height: 94px
+    background: url("../img/logo.svg")
+
+.nav
+    font-family: $title_font
+    font-size: 1.125rem
+    font-weight: 600
+    line-height: 1.2em
+    flex-basis: auto
+    display: flex
+    justify-content: flex-end
+    column-gap: 32px
+
+.contacts
+    width: 190px
+    text-align: center
+    &__phone
+        font-family: $text_font
+        color: $title_color
+        font-size: 1.25rem
+        font-weight: 600
+        line-height: 1.2em
+        margin-bottom: 7px
+    &__callback
+        font-family: $title_font
+        color: $title_color
+        font-size: 1.125rem
+        font-weight: 600
+        line-height: 1.2em
+        text-decoration: underline
+        background: none
+
+/*MAIN SCREEN*/
+
+.header
+    &__nav
+        flex: 2 2 auto
+
+.main-screen
+    background: url("../img/bg.jpg") no-repeat center
+    background-size: cover
+    padding: 274px 0 253px
+    &__container
+        text-align: center
+    &__ttile
+        margin-bottom: 28px
+    &__address
+        font-family: $text_font
+        color: $title_color
+        font-size: 2rem
+        font-weight: 400
+        line-height: 1.2em
+    &__square
+        font-family: $text_font
+        color: $title_color
+        font-size: 2.2rem
+        font-weight: 700
+        line-height: 2em
+        margin-bottom: 35px
+    &__btn
+        font-family: $text_font
+        color: $text_color_light
+        font-size: 1.375rem
+        font-weight: 600
+        line-height: 2em
+        background-color: $link_color
+        padding: 15px 25px
+        border-radius: 10px
+        box-shadow: 0px 6px 0px #2CABDC
+
+/*DESCRIPTION*/
+
+.description
+    padding: 107px 0 152px
+    &__container
+        text-align: center
+
+        
+
