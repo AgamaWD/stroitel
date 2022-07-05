@@ -12,6 +12,7 @@
     <meta property='og:description' content=''> <!--ОПИСАНИЕ ДЛЯ СОЦСЕТЕЙ-->
     <meta property='og:image' content='img/favicon.png'> <!--КАРТИНКА ДЛЯ СОЦСЕТЕЙ-->
     <link rel='canonical' href='https://'> <!--КАНОНИЧЕСКАЯ ССЫЛКА-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel='stylesheet' type='text/css' href='css/style.css'>
 </head>
 <body>
@@ -28,6 +29,112 @@
                 <p class="contacts__phone">+7 (918) 377-48-10</p>
                 <button class="contacts__callback">Заказать звонок</button>
             </div>
+            <nav class="nav-mobile" id="nav-mobile">
+                <div class="nav-mobile__open" id="menu-open">Меню</div>
+                <div class="nav-mobile__popup" id="menu-popup">
+                    <div class="nav-mobile__header">
+                        <div class="nav-mobile__logo"></div>
+                        <div class="nav-mobile__close" id="menu-close"></div>
+                    </div>
+                    <div id="accordeon">
+                    <div class="spoiler nav-mobile__spoiler menu-item spoiler-js collapsed">
+                        <div class="spoiler__header">
+                            <p class="spoiler__title">Жилые комплексы</p>
+                            <div class="spoiler__icon"></div>
+                        </div>
+                        <div class="spoiler__content" id="accordeon2">
+                            <div class="spoiler nav-mobile__spoiler menu-item spoiler-js nested collapsed">
+                                <div class="spoiler__header">
+                                    <p class="spoiler__title">ЖК Космос</p>
+                                    <div class="spoiler__icon"></div>
+                                </div>
+                                <div class="spoiler__content">
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Преимущества</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Инфраструктура</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Планировка</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Отделка</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Описание</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Контакты</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Документация</a>
+                                </div>
+                            </div>
+                            <div class="spoiler nav-mobile__spoiler menu-item spoiler-js nested collapsed">
+                                <div class="spoiler__header">
+                                    <p class="spoiler__title">ЖК Яблоновский</p>
+                                    <div class="spoiler__icon"></div>
+                                </div>
+                                <div class="spoiler__content">
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Преимущества</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Инфраструктура</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Планировка</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Отделка</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Описание</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Контакты</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Документация</a>
+                                </div>
+                            </div>
+                            <div class="spoiler nav-mobile__spoiler menu-item spoiler-js nested collapsed">
+                                <div class="spoiler__header">
+                                    <p class="spoiler__title">ЖК на Шоссейной</p>
+                                    <div class="spoiler__icon"></div>
+                                </div>
+                                <div class="spoiler__content">
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Преимущества</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Инфраструктура</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Планировка</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Отделка</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Описание</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Контакты</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Документация</a>
+                                </div>
+                            </div>
+                            <div class="spoiler nav-mobile__spoiler menu-item spoiler-js nested collapsed">
+                                <div class="spoiler__header">
+                                    <p class="spoiler__title">ЖК Солнечная</p>
+                                    <div class="spoiler__icon"></div>
+                                </div>
+                                <div class="spoiler__content">
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Преимущества</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Инфраструктура</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Планировка</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Отделка</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Описание</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Контакты</a>
+                                    <a href="#" class='link link--light nav-mobile__link menu-item'>Документация</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spoiler nav-mobile__spoiler menu-item spoiler-js collapsed">
+                        <div class="spoiler__header">
+                            <p class="spoiler__title">О компании</p>
+                            <div class="spoiler__icon"></div>
+                        </div>
+                        <div class="spoiler__content">
+                            <p class="menu-item">тут нет пунктов<p>
+                        </div>
+                    </div>
+                    <div class="spoiler nav-mobile__spoiler menu-item spoiler-js collapsed">
+                        <div class="spoiler__header">
+                            <p class="spoiler__title">Как купить</p>
+                            <div class="spoiler__icon"></div>
+                        </div>
+                        <div class="spoiler__content">
+                            <a href="#" class='link link--light nav-mobile__link menu-item'>Ипотека</a>
+                            <a href="#" class='link link--light nav-mobile__link menu-item'>Военная ипотека</a>
+                            <a href="#" class='link link--light nav-mobile__link menu-item'>Материнский капитал</a>
+                            <a href="#" class='link link--light nav-mobile__link menu-item'>Наличный расчёт</a>
+                            <a href="#" class='link link--light nav-mobile__link menu-item'>Рассрочка</a>
+                        </div>
+                    </div>
+                    <div class="contacts nav-mobile__contacts menu-item">
+                        <p class="contacts__title">Контакты</p>
+                        <p class="contacts__phone">+7 (918) 377-48-10</p>
+                        <button class="contacts__callback">Заказать звонок</button>
+                    </div>
+                </div>
+                </div>
+            </nav>
         </div>
     </header>
     <section class="main-screen">
@@ -41,8 +148,126 @@
     <section class="description">
         <div class="container description__container">
             <h2 class="h2-title">Описание Жилого Комплекса</h2>
+            <div class="swiper-tabs">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide btn-slide">
+                        <div class="btn-slide__inner">Парковка
+                            <div class="notch"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide btn-slide">
+                        <div class="btn-slide__inner">Архитектура
+                            <div class="notch"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide btn-slide">
+                        <div class="btn-slide__inner">Охрана
+                            <div class="notch"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide btn-slide">
+                        <div class="btn-slide__inner">Территория
+                            <div class="notch"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="image-slide">
+                            <div class="image-slide__item image-slide__item--1" style="background-image: url('img/slide_1.jpg')"></div>
+                            <div class="image-slide__item" style="background-image: url('img/slide_2.jpg')"></div>
+                            <div class="image-slide__item" style="background-image: url('img/slide_3.jpg')"></div>
+                            <div class="image-slide__item image-slide__item--last" style="background-image: url('img/slide_4.jpg')"></div>
+                            <div class="image-slide__content">
+                                <h3 class="image-slide__title h3-title">Парковка</h3>
+                                <div class="image-slide__text">Жилой комплекс "Яблоновский" расположен на ул. Кобцевой Н.С. в пгт. Яблоновский. За пять минут пешком можно дойти до муниципальной поликлиники, школы и детского садика.<br><br>
+                                Этот жилой комплекс располагается в непосредственной близости от улицы Гагарина, где проходит абсолютное большинство маршрутов общественного транспорта, соответственно легко добраться во все части поселка и города Краснодар. Тут же располагается магазин «Магнит», «Магнит Косметик», МФЦ, овощной рынок, мебельные магазины, аптеки и другие предприятия сферы услуг.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image-slide">
+                            <div class="image-slide__item image-slide__item--1" style="background-image: url('img/slide_2.jpg')"></div>
+                            <div class="image-slide__item" style="background-image: url('img/slide_3.jpg')"></div>
+                            <div class="image-slide__item" style="background-image: url('img/slide_4.jpg')"></div>
+                            <div class="image-slide__item image-slide__item--last" style="background-image: url('img/slide_1.jpg')"></div>
+                            <div class="image-slide__content">
+                                <h3 class="image-slide__title h3-title">Архитектура</h3>
+                                <div class="image-slide__text">Жилой комплекс "Яблоновский" расположен на ул. Кобцевой Н.С. в пгт. Яблоновский. За пять минут пешком можно дойти до муниципальной поликлиники, школы и детского садика.<br><br>
+                                Этот жилой комплекс располагается в непосредственной близости от улицы Гагарина, где проходит абсолютное большинство маршрутов общественного транспорта, соответственно легко добраться во все части поселка и города Краснодар. Тут же располагается магазин «Магнит», «Магнит Косметик», МФЦ, овощной рынок, мебельные магазины, аптеки и другие предприятия сферы услуг.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image-slide">
+                            <div class="image-slide__item image-slide__item--1" style="background-image: url('img/slide_3.jpg')"></div>
+                            <div class="image-slide__item" style="background-image: url('img/slide_4.jpg')"></div>
+                            <div class="image-slide__item" style="background-image: url('img/slide_1.jpg')"></div>
+                            <div class="image-slide__item image-slide__item--last" style="background-image: url('img/slide_2.jpg')"></div>
+                            <div class="image-slide__content">
+                                <h3 class="image-slide__title h3-title">Охрана</h3>
+                                <div class="image-slide__text">Жилой комплекс "Яблоновский" расположен на ул. Кобцевой Н.С. в пгт. Яблоновский. За пять минут пешком можно дойти до муниципальной поликлиники, школы и детского садика.<br><br>
+                                Этот жилой комплекс располагается в непосредственной близости от улицы Гагарина, где проходит абсолютное большинство маршрутов общественного транспорта, соответственно легко добраться во все части поселка и города Краснодар. Тут же располагается магазин «Магнит», «Магнит Косметик», МФЦ, овощной рынок, мебельные магазины, аптеки и другие предприятия сферы услуг.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image-slide">
+                            <div class="image-slide__item image-slide__item--1" style="background-image: url('img/slide_4.jpg')"></div>
+                            <div class="image-slide__item" style="background-image: url('img/slide_1.jpg')"></div>
+                            <div class="image-slide__item" style="background-image: url('img/slide_2.jpg')"></div>
+                            <div class="image-slide__item image-slide__item--last" style="background-image: url('img/slide_3.jpg')"></div>
+                            <div class="image-slide__content">
+                                <h3 class="image-slide__title h3-title">Территория</h3>
+                                <div class="image-slide__text">Жилой комплекс "Яблоновский" расположен на ул. Кобцевой Н.С. в пгт. Яблоновский. За пять минут пешком можно дойти до муниципальной поликлиники, школы и детского садика.<br><br>
+                                Этот жилой комплекс располагается в непосредственной близости от улицы Гагарина, где проходит абсолютное большинство маршрутов общественного транспорта, соответственно легко добраться во все части поселка и города Краснодар. Тут же располагается магазин «Магнит», «Магнит Косметик», МФЦ, овощной рынок, мебельные магазины, аптеки и другие предприятия сферы услуг.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+      
+        new Swiper('.swiper', {
+            slidesPerView: 1,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 500,
+            thumbs: {
+                swiper: {
+                    el: '.swiper-tabs',
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            grid: {
+                                rows: 4,
+                            },
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 30,
+                            grid: {
+                                rows: 2,
+                            }
+                        },
+                        1021: {
+                            slidesPerView: 4,
+                            spaceBetween: 40,
+                        }
+                    }
+                }
+            }
+        });
+        </script>
     <script type='text/javascript' src='js/main.js'></script>
 </body>
 </html>

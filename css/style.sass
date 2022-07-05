@@ -57,7 +57,7 @@ html
 
 body, img
     width: 100%
-    height: 100%
+    height: 100% 
 
 ul, ol
     list-style-type: none
@@ -71,6 +71,8 @@ $text_color_light: #fff
 $title_color:#212D55
 
 $link_color:#31BEF4
+
+$tabs_bg:#F9FCFD
 
 $title_font: 'Raleway', Arial, Helvetica, sans-serif 
 
@@ -108,7 +110,14 @@ $transition_delay: .5s
     color: $title_color
     font-size: 2.8rem
     font-weight: 700
-    line-height: 1.6em
+    line-height: 1.6
+
+.h3-title
+    font-family: $text_font
+    color: $title_color
+    font-size: 1.375rem
+    font-weight: 700
+    line-height: 1.2
 
 .header
     position: absolute
@@ -140,6 +149,9 @@ $transition_delay: .5s
     justify-content: flex-end
     column-gap: 32px
 
+.nav-mobile
+    display: none
+
 .contacts
     width: 190px
     text-align: center
@@ -159,6 +171,101 @@ $transition_delay: .5s
         text-decoration: underline
         background: none
 
+.swiper
+  width: 100%
+  height: 573px
+  margin-top: 60px
+
+.swiper-tabs
+    margin-top: 60px
+    text-align: left
+    height: 102px
+
+.btn-slide
+    width: 193px
+    height: 102px
+    background: $tabs_bg
+    box-shadow: 0px 5px 15px rgba(33, 45, 85, 0.2)
+    border-radius: 10px
+    padding: 15px
+    cursor: pointer
+    &__inner
+        position: relative
+        font-family: $text_font
+        color: $title_color
+        font-size: 1.375rem
+        font-weight: 600
+        line-height: 1.2em
+        background: $text_color_light
+        box-shadow: 0px 5px 19px rgba(33, 45, 85, 0.06)
+        border-radius: 10px
+        border-style: solid
+        border-width: 0
+        border-color: transparent
+        padding: 23px 0 23px 21px
+        text-align: left
+        transition: all $transition_delay
+        .notch
+            position: absolute
+            left: -1px
+            top: 50%
+            width: 7px
+            height: 18px
+            background: linear-gradient(to left, #ECEFF3, #F2F5F7 50%)
+            transform: translateY(-50%)
+            border-radius: 0 100% 100% 0 / 0 50% 50% 0
+            border-style: solid
+            border-right-width: 1px
+            border-top-width: 1px
+            border-bottom-width: 1px
+            border-right-color: transparent
+            border-top-color: transparent
+            border-bottom-color: transparent
+            transition: all $transition_delay
+    &.swiper-slide-thumb-active .btn-slide__inner
+        color: $link_color
+        border-width: 1px
+        border-color: $link_color
+        transition: all $transition_delay
+        .notch
+            border-top-color: $link_color
+            border-bottom-color: $link-color
+            border-right-color: $link_color
+            transition: all $transition_delay
+            
+
+.image-slide
+    position: relative
+    display: grid
+    grid-template-columns: 74% auto
+    grid-template-rows: 1fr 1fr 1fr
+    gap: 30px
+    height: 100%
+    &__item
+        background-size: cover
+        background-repeat: no-repeat
+        border-radius: 10px
+        &--1
+            grid-row: 1 / 4
+    &__content
+        position: absolute
+        left: 27px
+        bottom: 54px
+        width: 47%
+        background: $text_color_light
+        box-shadow: 0px 5px 19px rgba(33, 45, 85, 0.06)
+        border-radius: 10px
+        text-align: left
+        padding: 20px
+    &__title
+        margin-bottom: 24px
+    &__text
+        font-family: $text_font
+        color: $text_color_dark
+        font-size: 1rem
+        font-weight: 400
+        line-height: 1.2em
+
 /*MAIN SCREEN*/
 
 .header
@@ -166,12 +273,14 @@ $transition_delay: .5s
         flex: 2 2 auto
 
 .main-screen
-    background: url("../img/bg.jpg") no-repeat center
+    background-image: url("../img/bg.jpg") 
+    background-repeat: no-repeat 
+    background-position: center
     background-size: cover
     padding: 274px 0 253px
     &__container
         text-align: center
-    &__ttile
+    &__title
         margin-bottom: 28px
     &__address
         font-family: $text_font
@@ -204,5 +313,251 @@ $transition_delay: .5s
     &__container
         text-align: center
 
-        
+/*АДАПТИВНОСТЬ*/
 
+@media (max-width: 1199px)
+    .header__container
+        column-gap: 30px
+    .nav
+        column-gap: 25px
+    
+@media (max-width: 1020px)
+    .h1-title
+        font-size: 1.75rem
+        line-height: 1.4em
+
+    .h2-title
+        font-size: 1.75rem
+
+    .nav
+        display: none
+
+    .spoiler__header
+        position: relative
+        padding-right: 16px
+    
+    .spoiler__icon
+        position: absolute
+        right: 0
+        top: 0
+        content: ''           
+        width: 11px
+        height: 100%
+        background-image: url("../img/spoiler-arrow.svg")
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+
+    .spoiler__content
+        overflow: hidden
+
+    .spoiler.collapsed > .spoiler__content
+        visibility: hidden
+        opacity: 0
+        max-height: 0px
+        padding-top: 0px
+        transition: all $transition_delay linear
+
+    .spoiler.collapsed > .spoiler__header .spoiler__icon
+        transform: rotate(180deg)
+        transition: transform $transition_delay linear
+
+    .spoiler.deployed > .spoiler__content
+        visibility: visible
+        opacity: 1
+        max-height: 400px
+        padding-top: 15px
+        transition: all $transition_delay linear
+
+    .spoiler.deployed > .spoiler__header .spoiler__icon
+        transform: rotate(0deg)
+        transition: transform $transition_delay linear
+
+    .contacts
+        display: none
+        &__title
+            margin-bottom: 30px
+        &__phone, &__callback
+            color: $text_color_light
+            
+    .nav-mobile
+        display: block
+        z-index: 10
+        &__open
+            position: relative
+            width: 91px
+            font-family: $text-font
+            color: $title_color
+            font-size: 1.125rem
+            font-weight: 600
+            line-height: 2.2em
+            &::after
+                position: absolute
+                right: 0
+                top: center
+                content: ''
+                width: 31px
+                height: 100%
+                background: url("../img/open-menu.svg") no-repeat center
+                background-size: contain
+        &__popup
+            position: fixed
+            top: 0
+            right: -320px
+            min-height: 100vh
+            width: 0
+            padding: 0px
+            background: $title-color
+            transition: all $transition_delay linear
+            overflow-y: auto
+            overflow-x: hidden
+            &.active
+                right: 0
+                padding: 15px
+                width: 100%
+                transition: all $transition_delay linear
+            .menu-item
+                display: block
+                font-family: $text-font
+                color: $text_color_light
+                font-size: 1.125rem
+                font-weight: 600
+                line-height: 1.2
+                text-align: right
+                margin-bottom: 10px
+            .menu-item:not(.spoiler)
+                margin-right: 16px
+            &> .menu-item
+                font-family: $title_font
+        &__header
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 13px
+        &__logo
+            width: 153px
+            height: 82px
+            background: url("../img/logo_mobile_menu.svg")
+        &__close
+            width: 15px
+            height: 15px
+            background: url("../img/close_menu.svg")
+            margin-right: 9px
+        &__contacts
+            width: 100%
+            padding-right: 16px
+
+    .main-screen
+        padding: 274px 0 253px
+        &__container
+            text-align: center
+        &__title
+            margin-bottom: 25px
+        &__address
+            font-size: 1.25rem
+            margin-bottom: 25px
+        &__square
+            font-size: 1.45rem
+            line-height: 1.2em
+            margin-bottom: 30px
+        &__btn
+            font-size: 1.25rem
+            line-height: 1.2
+            padding: 16px 20px
+    
+    .swiper-tabs
+        height: 244px
+    
+    .btn-slide
+        width: calc((100% - 30px) / 2)
+        height: 102px
+
+@media (max-width: 767px)
+    .logo
+        width: 148px
+        height: 79px
+        background: url("../img/logo_mobile.svg")
+        z-index: 10
+
+    .header
+        &__container
+            padding: 20px 15px 30px
+        
+    .main-screen
+        position: relative
+        background-position-x: 36%
+        padding: 243px 0 405px
+        &::after
+            content: ''
+            position: absolute
+            bottom: -37px
+            left: 0
+            width: 100%
+            height: 255px
+            background: url("../img/clouds.png") no-repeat 100% 100%
+            background-size: 100% 100%
+
+    .description
+        padding: 22px 0 30px
+        &__container
+            padding: 0
+    
+    .swiper
+        margin-top: 27px
+        height: 479px
+
+    .swiper-tabs
+        height: 364px
+        text-align: center
+        padding: 0 15px 
+    
+    .btn-slide
+        width: 100%
+        height: 71px
+        padding: 10px
+        margin-bottom: 20px
+        &__inner
+            font-size: 1.125rem
+            padding: 15px 0
+            text-align: center
+            .notch
+                width: 9px
+                height: 15px
+
+    .image-slide
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 74% auto
+        gap: 10px
+        &__item
+            &--1
+                grid-row: 1
+                grid-column: 1 / 3
+            &--last
+                display: none
+        &__content
+            max-height: 55%
+            left: 50%
+            bottom: 140px
+            width: calc(100% - 30px)
+            transform: translateX(-50%)
+        &__title
+            margin-bottom: 24px
+        &__text
+            max-height: 172px
+            overflow: hidden
+
+            /*Популярные размеры экранов:
+                320х534
+                320х528
+                360х640
+                375х667
+                480х800
+                720х1280
+                768х1024
+                1024х768
+                1280х800
+                1280х1024
+                1366х768
+                1440х900
+                1600х900
+                1920х1080*/
