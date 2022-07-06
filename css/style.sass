@@ -91,6 +91,7 @@ $transition_delay: .5s
 .link
     color: $title_color
     text-decoration: none
+    cursor: pointer
     transition: color $transition_delay
     &--light
         color: $text_color_light
@@ -233,7 +234,6 @@ $transition_delay: .5s
             border-right-color: $link_color
             transition: all $transition_delay
             
-
 .image-slide
     position: relative
     display: grid
@@ -305,6 +305,7 @@ $transition_delay: .5s
         padding: 15px 25px
         border-radius: 10px
         box-shadow: 0px 6px 0px #2CABDC
+        cursor: pointer
 
 /*DESCRIPTION*/
 
@@ -335,6 +336,7 @@ $transition_delay: .5s
     .spoiler__header
         position: relative
         padding-right: 16px
+        cursor: pointer
     
     .spoiler__icon
         position: absolute
@@ -391,10 +393,11 @@ $transition_delay: .5s
             font-size: 1.125rem
             font-weight: 600
             line-height: 2.2em
+            cursor: pointer
             &::after
                 position: absolute
                 right: 0
-                top: center
+                top: 0
                 content: ''
                 width: 31px
                 height: 100%
@@ -402,16 +405,18 @@ $transition_delay: .5s
                 background-size: contain
         &__popup
             position: fixed
+            visibility: hidden
             top: 0
             right: -320px
-            min-height: 100vh
+            height: 100vh
             width: 0
             padding: 0px
             background: $title-color
             transition: all $transition_delay linear
-            overflow-y: auto
             overflow-x: hidden
+            overflow-y: auto
             &.active
+                visibility: visible
                 right: 0
                 padding: 15px
                 width: 100%
@@ -443,6 +448,7 @@ $transition_delay: .5s
             height: 15px
             background: url("../img/close_menu.svg")
             margin-right: 9px
+            cursor: pointer
         &__contacts
             width: 100%
             padding-right: 16px
@@ -545,19 +551,3 @@ $transition_delay: .5s
         &__text
             max-height: 172px
             overflow: hidden
-
-            /*Популярные размеры экранов:
-                320х534
-                320х528
-                360х640
-                375х667
-                480х800
-                720х1280
-                768х1024
-                1024х768
-                1280х800
-                1280х1024
-                1366х768
-                1440х900
-                1600х900
-                1920х1080*/

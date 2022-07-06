@@ -76,6 +76,7 @@ ul, ol {
 .link {
   color: #212D55;
   text-decoration: none;
+  cursor: pointer;
   transition: color 0.5s;
 }
 .link--light {
@@ -322,6 +323,7 @@ ul, ol {
   padding: 15px 25px;
   border-radius: 10px;
   box-shadow: 0px 6px 0px #2CABDC;
+  cursor: pointer;
 }
 
 /*DESCRIPTION*/
@@ -361,6 +363,7 @@ ul, ol {
   .spoiler__header {
     position: relative;
     padding-right: 16px;
+    cursor: pointer;
   }
 
   .spoiler__icon {
@@ -428,11 +431,12 @@ ul, ol {
     font-size: 1.125rem;
     font-weight: 600;
     line-height: 2.2em;
+    cursor: pointer;
   }
   .nav-mobile__open::after {
     position: absolute;
     right: 0;
-    top: center;
+    top: 0;
     content: "";
     width: 31px;
     height: 100%;
@@ -441,17 +445,19 @@ ul, ol {
   }
   .nav-mobile__popup {
     position: fixed;
+    visibility: hidden;
     top: 0;
     right: -320px;
-    min-height: 100vh;
+    height: 100vh;
     width: 0;
     padding: 0px;
     background: #212D55;
     transition: all 0.5s linear;
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
   }
   .nav-mobile__popup.active {
+    visibility: visible;
     right: 0;
     padding: 15px;
     width: 100%;
@@ -489,6 +495,7 @@ ul, ol {
     height: 15px;
     background: url("../img/close_menu.svg");
     margin-right: 9px;
+    cursor: pointer;
   }
   .nav-mobile__contacts {
     width: 100%;
@@ -615,20 +622,5 @@ ul, ol {
   .image-slide__text {
     max-height: 172px;
     overflow: hidden;
-    /*Популярные размеры экранов:
-    *  320х534
-    *  320х528
-    *  360х640
-    *  375х667
-    *  480х800
-    *  720х1280
-    *  768х1024
-    *  1024х768
-    *  1280х800
-    *  1280х1024
-    *  1366х768
-    *  1440х900
-    *  1600х900
-    *  1920х1080*/
   }
 }/*# sourceMappingURL=style.css.map */
